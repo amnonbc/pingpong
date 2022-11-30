@@ -28,6 +28,7 @@ func main() {
 	flag.DurationVar(&delay, "delay", time.Second, "delay between messages")
 	flag.BoolVar(&fork, "fork", false, "run a separate process")
 	flag.BoolVar(&pong, "pong", false, "just run server")
+	flag.Parse()
 
 	if pong {
 		doEcho()
