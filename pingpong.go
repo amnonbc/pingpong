@@ -78,7 +78,7 @@ func ping() error {
 		if err != nil {
 			return err
 		}
-		log.Println(time.Since(start))
+		fmt.Println("got packet", n, "in", time.Since(start))
 	}
 	copy(msg, "end")
 	_, err = conn.Write(msg)
